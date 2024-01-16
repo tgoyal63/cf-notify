@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { APIHandler } from "@/utils/controller";
-import { z } from "zod";
+import { logger } from "@/utils/logger";
 
 export const startServer = () => {
 	const app = new Elysia();
@@ -21,5 +21,7 @@ export const startServer = () => {
 		})
 	);
 
-	app.listen(PORT, () => console.log(`App is running...`));
+	app.listen(PORT, () => {
+		logger.info(`App is running...`);
+	});
 };
