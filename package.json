@@ -9,6 +9,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@otherguy/elysia-logging": "^0.0.16",
     "elysia": "^0.8.9",
     "winston": "^3.11.0",
     "zod": "^3.22.4"

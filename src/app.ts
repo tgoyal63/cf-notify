@@ -1,10 +1,13 @@
 import { Elysia } from "elysia";
 import { APIHandler } from "@/utils/controller";
 import { logger } from "@/utils/logger";
+import { networkLogger } from "./middlewares/network-logger";
 
 export const startServer = () => {
 	const app = new Elysia();
 	const PORT = process.env["PORT"] ?? "";
+
+	app.use(networkLogger);
 
 	app.get(
 		"/",
