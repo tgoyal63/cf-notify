@@ -26,8 +26,8 @@
 		"dev": "bun --watch src/index.ts",
 		"test": "bun test",
 		"lint": "eslint src/**/*.ts",
-		"pre-commit": "bun lint && bun test && bun build",
+		"pre-commit": "bun lint && bun test",
 		"post-merge": "bun install",
-		"commit-msg": "bunx --no-install commitlint --edit"
+		"commit-msg": "bunx commitlint --edit"
 	}
 }
