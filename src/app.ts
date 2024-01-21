@@ -21,7 +21,7 @@ export const startServer = () => {
 				message: "The health check route from CF Notify!!",
 				code: 200,
 			};
-		})
+		}),
 	);
 
 	app.listen(PORT, () => {
