@@ -28,6 +28,7 @@
 		"lint": "eslint src/**/*.ts",
 		"pre-commit": "bun lint && bun test",
 		"post-merge": "bun install",
-		"commit-msg": "bunx commitlint --edit"
+		"commit-msg": "bunx commitlint --edit",
+		"start": "bun src/index.ts"
 	}
 }

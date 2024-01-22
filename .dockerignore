@@ -1,0 +1,11 @@
+node_modules
+
+.env
+.env.production
+.env.*
+
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+.DS_Store
