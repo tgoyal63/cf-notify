@@ -177,3 +177,6 @@ dist
 
 .idea
 .vscode
+
+# sst
+.sst
