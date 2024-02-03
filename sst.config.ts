@@ -1,5 +1,6 @@
+import { getLambdaAPIs } from "@/api/lambdas";
 import { type SSTConfig } from "sst";
-import { Bucket } from "sst/constructs";
+// import { Bucket, Service } from "sst/constructs";
 
 export default {
 	config(input) {
@@ -14,13 +15,7 @@ export default {
 	},
 	stacks(app) {
 		app.stack(function Site({ stack }) {
-			// const service = new Service(stack, "service", {
-			// 	port: 8000,
-			// });
-			// stack.addOutputs({
-			// 	ServiceUrl: service.url,
-			// });
-			new Bucket(stack, "public");
+			getLambdaAPIs(stack);
 		});
 	},
 } satisfies SSTConfig;

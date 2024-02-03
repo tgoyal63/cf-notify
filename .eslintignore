@@ -4,3 +4,4 @@ commitlint.config.ts
 jest.config.ts
 /src/@types/express
 commitlint.config.cjs
+sst-env.d.ts

@@ -1,40 +1,41 @@
 {
-	"name": "cf-notify",
-	"module": "src/index.ts",
-	"type": "module",
+  "name": "cf-notify",
+  "module": "src/index.ts",
+  "type": "module",
   "license": "MIT",
-	"devDependencies": {
-		"@commitlint/cli": "^18.4.4",
-		"@commitlint/config-conventional": "^18.4.4",
-		"@types/bun": "latest",
-		"@typescript-eslint/eslint-plugin": "^6.19.0",
-		"@typescript-eslint/parser": "^6.19.0",
-		"eslint": "^8.56.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-prettier": "^5.1.3",
-		"sst": "^2.40.1",
-		"aws-cdk-lib": "2.124.0",
-		"constructs": "10.3.0"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"dependencies": {
-		"@otherguy/elysia-logging": "^0.0.16",
-		"elysia": "^0.8.9",
-		"husky": "^8.0.3",
-		"winston": "^3.11.0",
-		"zod": "^3.22.4"
-	},
-	"scripts": {
-		"sst-dev": "sst bind next dev",
-		"sst-deploy": "sst deploy --stage=production",
-		"dev": "bun --watch src/index.ts",
-		"test": "bun test",
-		"lint": "eslint src/**/*.ts",
-		"pre-commit": "bun lint && bun test",
-		"post-merge": "bun install",
-		"commit-msg": "bunx commitlint --edit",
-		"start": "bun src/index.ts"
-	}
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@types/aws-lambda": "^8.10.133",
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "aws-cdk-lib": "2.124.0",
+    "constructs": "10.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "sst": "^2.40.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@otherguy/elysia-logging": "^0.0.16",
+    "elysia": "^0.8.9",
+    "husky": "^8.0.3",
+    "winston": "^3.11.0",
+    "zod": "^3.22.4"
+  },
+  "scripts": {
+    "sst-dev": "sst dev",
+    "sst-deploy": "sst deploy --stage=production",
+    "dev": "bun --watch src/index.ts",
+    "test": "bun test",
+    "lint": "eslint src/**/*.ts",
+    "pre-commit": "bun lint && bun test",
+    "post-merge": "bun install",
+    "commit-msg": "bunx commitlint --edit",
+    "start": "bun src/index.ts"
+  }
 }
