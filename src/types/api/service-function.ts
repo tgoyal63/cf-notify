@@ -3,5 +3,5 @@
 import type { APIResponse } from ".";
 
 export type ServiceFunction<D = void, R = Record<string, never>> = (
-	args: R,
+	args?: R,
 ) => Promise<APIResponse<D>>;
